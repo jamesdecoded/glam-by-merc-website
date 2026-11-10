@@ -6,9 +6,11 @@ Portfolio website for Mercy Mukunda, founder and freelance makeup artist (bridal
 Double-click `index.html`. No build step or install needed.
 
 ## Folder guide
-- `index.html` : page structure and text (hero, work, services, booking steps, about, booking)
+- `index.html` : page structure and text (hero, moodboard, work, services, booking steps, about, booking)
 - `css/style.css` : all styling, light and dark mode, responsive rules
+- `js/theme.js` : system theme detection and saved light/dark preference controls in the mobile menu
 - `js/main.js` : gallery, filter tabs, accessible photo viewer, scroll effects, and contextual WhatsApp button. The gallery list is the `items` array near the top
+- `404.html` : custom not-found page for static hosts that support a root-level 404 document
 - `assets/images/` : optimized photos and reel poster frames
 - `assets/video/` : optimized reels (no sound, loop silently)
 - `_source-originals/` : the original uploads, untouched. Not needed to run the site; do not upload to hosting
@@ -23,7 +25,7 @@ Double-click `index.html`. No build step or install needed.
 - **Instagram / testimonials:** not added yet. Add them in the `#contact` and `#about` sections
 
 ## Publishing
-Upload the whole folder (except `_source-originals` and `docs`) to any static host such as Netlify, Cloudflare Pages, GitHub Pages or your hosting provider's `public_html`. Keep the folder structure as is.
+Upload the whole folder (except `_source-originals` and `docs`) to any static host such as Netlify, Cloudflare Pages, GitHub Pages or your hosting provider's `public_html`. Keep the folder structure as is. The root-level `404.html` is used automatically by hosts that support it.
 
 ## After you have a domain
 - Add `<link rel="canonical" href="https://your-domain/">` and an `og:image` with a full https URL to `index.html`

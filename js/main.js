@@ -113,7 +113,16 @@ document.querySelectorAll(".rv").forEach(function(e){io?io.observe(e):e.classLis
 
 /* Hamburger / drawer */
 var burger=$("#nav-burger"),drawer=$("#nav-drawer"),overlay=$("#nav-overlay");
+var menuView=$("#nav-menu-main"),themeView=$("#nav-theme-view"),themeOpen=$("#nav-theme-open"),themeBack=$("#nav-theme-back");
+function showMenuView(){
+  themeView.hidden=true;menuView.hidden=false;themeOpen.setAttribute("aria-expanded","false");
+}
+function showThemeView(){
+  menuView.hidden=true;themeView.hidden=false;themeOpen.setAttribute("aria-expanded","true");
+  themeBack.focus();
+}
 function openDrawer(){
+  showMenuView();
   drawer.classList.add("is-open");overlay.classList.add("is-open");
   drawer.inert=false;drawer.setAttribute("aria-hidden","false");
   burger.setAttribute("aria-expanded","true");
@@ -121,6 +130,7 @@ function openDrawer(){
   $("#nav-drawer-close").focus();
 }
 function closeDrawer(){
+  showMenuView();
   drawer.classList.remove("is-open");overlay.classList.remove("is-open");
   drawer.inert=true;drawer.setAttribute("aria-hidden","true");
   burger.setAttribute("aria-expanded","false");
@@ -129,6 +139,8 @@ function closeDrawer(){
 }
 burger.addEventListener("click",openDrawer);
 $("#nav-drawer-close").addEventListener("click",closeDrawer);
+themeOpen.addEventListener("click",showThemeView);
+themeBack.addEventListener("click",function(){showMenuView();themeOpen.focus()});
 overlay.addEventListener("click",closeDrawer);
 drawer.querySelectorAll("a").forEach(function(a){a.addEventListener("click",closeDrawer)});
 document.addEventListener("keydown",function(e){if(e.key==="Escape"&&drawer.classList.contains("is-open"))closeDrawer()});

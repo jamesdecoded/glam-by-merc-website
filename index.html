@@ -11,6 +11,7 @@
 <meta property="og:description" content="Makeup for brides, events and photo shoots. See the work and book your date.">
 <meta property="og:image" content="assets/images/rose-event-glam.jpg">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"HealthAndBeautyBusiness","name":"Glam by Mer-c","telephone":"+254705274301","founder":{"@type":"Person","name":"Mercy Mukunda"},"description":"Freelance makeup artist for weddings, events, graduations and photo shoots.","makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Bridal makeup"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Event and graduation makeup"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Photo and video shoot makeup"}}]}</script>
+<script src="js/theme.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
@@ -34,12 +35,26 @@
 <div class="nav-drawer" id="nav-drawer" aria-hidden="true" inert>
   <div class="nav-drawer-inner">
     <button class="nav-drawer-close" id="nav-drawer-close" aria-label="Close menu">✕</button>
-    <a href="#work">Work</a>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#book">Book</a>
-    <a href="https://www.instagram.com/mercy_mukunda?psln=eHl5anp4bDJoYjN2" target="_blank" rel="noopener">Instagram</a>
-    <a class="btn" href="https://wa.me/254705274301?text=Hi%20Mercy%2C%20I%27d%20like%20to%20book%20makeup.%0ADate%3A%20%0APlace%3A%20%0APeople%3A%20" style="margin-top:8px">Book on WhatsApp</a>
+    <div class="nav-drawer-view" id="nav-menu-main">
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#book">Book</a>
+      <a href="https://www.instagram.com/mercy_mukunda?psln=eHl5anp4bDJoYjN2" target="_blank" rel="noopener">Instagram</a>
+      <button type="button" class="nav-drawer-link nav-theme-open" id="nav-theme-open" aria-controls="nav-theme-view">
+        <span>Theme</span><span aria-hidden="true">→</span>
+      </button>
+      <a class="btn" href="https://wa.me/254705274301?text=Hi%20Mercy%2C%20I%27d%20like%20to%20book%20makeup.%0ADate%3A%20%0APlace%3A%20%0APeople%3A%20" style="margin-top:8px">Book on WhatsApp</a>
+    </div>
+    <div class="nav-drawer-view nav-theme-view" id="nav-theme-view" hidden>
+      <button type="button" class="nav-drawer-link nav-theme-back" id="nav-theme-back"><span aria-hidden="true">←</span> Main menu</button>
+      <h2>Theme</h2>
+      <p>Choose how Glam by Mer-c looks on your device.</p>
+      <div class="theme-options" role="group" aria-label="Color theme">
+        <button type="button" class="theme-option" data-theme-choice="light" aria-pressed="false"><span aria-hidden="true">☼</span> Light</button>
+        <button type="button" class="theme-option" data-theme-choice="dark" aria-pressed="false"><span aria-hidden="true">☾</span> Dark</button>
+      </div>
+    </div>
   </div>
 </div>
 <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
@@ -67,6 +82,30 @@
 <div class="marq" aria-hidden="true"><div class="mt" id="mt"></div></div>
 
 <div class="wrap">
+<section id="lookbook" class="lookbook">
+<span class="section-gem" aria-hidden="true">✦</span>
+<p class="lookbook-kicker">The mood · The makeup · The Mer-c look</p>
+<h2 class="rv" data-rv="up">The Mer-c look</h2>
+<p class="lede rv" data-rv="up">Skin-first glow, soft definition and a little color when the moment calls for it.</p>
+<div class="lookbook-grid rv" data-rv="up">
+  <figure class="lookbook-card lookbook-card-feature">
+    <img src="assets/images/natural-glow.jpg" alt="Natural makeup with a fresh, luminous finish" loading="lazy">
+    <figcaption><span>01 · The base</span><strong>Fresh, skin-first glow</strong></figcaption>
+  </figure>
+  <figure class="lookbook-card lookbook-card-rose">
+    <img src="assets/images/rose-event-glam.jpg" alt="Soft rose-toned event makeup" loading="lazy">
+    <figcaption><span>02 · The tone</span><strong>Soft warmth, never too much</strong></figcaption>
+  </figure>
+  <figure class="lookbook-card lookbook-card-detail">
+    <img src="assets/images/gold-coral-eyes.jpg" alt="Gold and coral eye makeup detail" loading="lazy">
+    <figcaption><span>03 · The detail</span><strong>A little color, made yours</strong></figcaption>
+  </figure>
+</div>
+<div class="lookbook-palette" aria-label="The Mer-c look color palette">
+  <span>Warm nude</span><span>Soft rose</span><span>Golden glow</span><span>Berry</span>
+</div>
+</section>
+
 <section id="work">
 <span class="section-gem" aria-hidden="true">✦</span>
 <h2 class="rv" data-rv="up">The work</h2>
