@@ -6,13 +6,17 @@ const M={
  "i2": "assets/images/berry-lip-soft-glam.jpg",
  "i3": "assets/images/graduation-day.jpg",
  "i4": "assets/images/night-out.jpg",
- "i5": "assets/images/natural-glow.jpg",
+ "i5": "assets/images/birthday-shoot-glam.jpg",
  "i6": "assets/images/glossy-lip-glow.jpg",
  "i7": "assets/images/mercy-mukunda-portrait.jpg",
  "i8": "assets/images/copper-evening-glam.jpg",
  "i9": "assets/images/colorful-stage-glam.jpg",
  "i10": "assets/images/feathered-stage-glam.jpg",
  "i11": "assets/images/red-celebration-glam.jpg",
+ "i12": "assets/images/graduation-glam.jpg",
+ "i13": "assets/images/graduation-shoot-glam.jpg",
+ "i14": "assets/images/soft-peach-glam.jpg",
+ "i15": "assets/images/golden-shimmer-glam.jpg",
  "v0": "assets/video/reel-1.mp4",
  "v0p": "assets/images/reel-1-poster.jpg",
  "v1": "assets/video/reel-2.mp4",
@@ -37,7 +41,7 @@ if(heroSlides.length>1){
 }
 
 /* Gallery */
-var items=[["i0","Shoots","Gold and coral eyes"],["v1","Reels","Soft glam for two"],["i6","Shoots","Glossy lip, glowing skin"],["i1","Events","Rose tones for an event"],["i3","Graduation","Graduation day"],["i11","Bridal","Bridal glam"],["i2","Bridal","Berry lip bridal look"],["v0","Reels","Event makeup, final touches"],["i8","Events","Copper evening glam"],["v2","Reels","Camera-ready groom makeup"],["i4","Events","Night out with the girls"],["i9","Shoots","Colourful stage glam"],["i5","Bridal","Natural bridal glow"],["i10","Shoots","Feathered stage glam"]];
+var items=[["i0","Bridal","Bridal team glam"],["v1","Reels","Soft glam for two"],["i6","Events","Soft glam for a wedding guest"],["i14","Shoots","Soft peach glam"],["i15","Shoots","Golden shimmer glam"],["i1","Events","Rose tones for an event"],["i3","Graduation","Graduation glam"],["i12","Graduation","Graduation glam"],["i13","Shoots","Graduation shoot glam"],["i11","Bridal","Bridal glam"],["i2","Bridal","Berry lip bridal look"],["v0","Reels","Event makeup, final touches"],["i8","Events","Copper evening glam"],["v2","Reels","Camera-ready groom makeup"],["i4","Shoots","Video shoot with Iyanni and his crew"],["i9","Shoots","Colourful stage glam"],["i5","Shoots","Birthday shoot glam"],["i10","Shoots","Feathered stage glam"]];
 var mas=$("#mas");
 items.forEach(function(it,n){
   var v=it[0][0]==="v",b=document.createElement("button");
