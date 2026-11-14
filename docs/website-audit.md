@@ -1,34 +1,28 @@
-# Glam by Mer-c: Website Audit (8 November 2026)
+# Glam by Mer-c: UI and content audit
 
-Tested in a real browser at 320, 375, 768, 1280 and 1920px wide, plus a code review.
+Updated 14 November 2026 after a source review and local browser checks.
 
-## Passed
-- No sideways scrolling at any width; all images load; reels play; no script errors
-- Text contrast meets WCAG AA (weakest pairing 5.15:1; minimum is 4.5:1)
-- Scroll reveals, filter tabs and photo viewer work
+## Changes made
 
-## Fixed
-- Menu tap targets raised from 19px to 40-42px (WCAG 2.2 minimum is 24px)
-- Added main content area, skip link, description, share tags and business structured data
-- Reels stay still for visitors with reduced motion; scrolling band pauses on hover
-- Photo viewer keeps keyboard focus on the Close button
-- Real WhatsApp and call links, biography added, placeholder text removed
+- Removed the nonfunctional mobile theme control and the unused theme script. The site currently uses one dark berry theme.
+- Removed unverified experience and client-count claims, and replaced the unverified response-speed label. Confirm business details and service information with Mercy before publication.
+- Added FAQ links to the desktop and mobile navigation.
+- Made scroll-reveal effects progressive enhancements: content remains visible unless JavaScript initializes the reveal behavior. Reduced-motion mode keeps all content visible.
+- Put the first hero image directly in the HTML with high fetch priority; later slideshow images load after the initial page work. The chosen photos and their order were not changed.
+- Isolated page content from keyboard and assistive-technology navigation while the mobile menu or photo viewer is open.
+- Added a polite screen-reader announcement for gallery filter result counts.
+- Updated the 404-page browser theme color to match the site background.
 
-## Updated after UI fixes
-- Closed photo viewer is removed from the accessibility tree until opened; keyboard focus can move between Close and video controls, and Escape closes the viewer.
-- Service quote links open WhatsApp with a service-specific booking prompt.
-- Floating WhatsApp button hides while the hero or portfolio is in view so it does not cover the main imagery.
-- Mobile hero collage is shorter to bring portfolio work closer to the first screen.
-- Added a three-step booking guide and descriptive reel captions based on their poster frames.
+## Validation
 
-## Still open
-1. Add Instagram, email, prices and real client quotes after Mercy provides verified details and permission
-2. Host on a real domain; add canonical link, og:image, sitemap
-3. Fonts untested offline; check headings on a phone
-4. Not done: competitor research, Core Web Vitals on a live network, security testing, full WCAG 2.2 AA audit
+- JavaScript syntax checked with `node --check`.
+- Browser checks cover the homepage and 404 page, mobile menu open/close and focus behavior, gallery filters and announcements, FAQ navigation and expansion, photo viewer open/close and modal isolation, reduced motion, image loading, and responsive overflow.
+- These local checks are not a substitute for a full WCAG 2.2 AA audit, assistive-technology testing, or live performance testing.
 
-## Recommended next
-- WhatsApp booking path (done); add a bridal section and a "how booking works" strip
-- Name each reel instead of "Reel"
-- "Behind the brush" section with before-and-after sliders
-- Custom domain, Google Business profile, Instagram feed
+## Still to verify before launch
+
+- Confirm business details, service FAQ claims, and any future testimonials with Mercy.
+- Add the canonical URL, absolute Open Graph image URL, and sitemap after the public domain is confirmed. Do not publish placeholder domain metadata.
+- Test external fonts, page speed, and Core Web Vitals on the production network.
+- Review slideshow crops on representative physical devices. `object-fit: cover` fills the hero frame and necessarily trims some edges; responsive focal positioning reduces unwanted crops but cannot preserve every pixel of a portrait on every screen shape.
+- Consider adding confirmed starting prices and booking/deposit expectations if the business can provide them.
